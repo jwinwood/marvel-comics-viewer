@@ -2,9 +2,12 @@ plugins {
     id("com.android.application")
     kotlin("android")
     id("kotlin-android-extensions")
+    id("koin")
 }
 group = "com.example.marvelcomicsviewer"
 version = "1.0-SNAPSHOT"
+
+val koinVersion = "2.2.0-rc-1"
 
 repositories {
     gradlePluginPortal()
@@ -21,6 +24,12 @@ dependencies {
     implementation("androidx.core:core-ktx:1.3.2")
     implementation("androidx.activity:activity-ktx:1.1.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0-beta01")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.3.0-beta01")
+
+    implementation("org.koin:koin-core:$koinVersion")
+    implementation("org.koin:koin-android:$koinVersion")
+    implementation("org.koin:koin-androidx-scope:$koinVersion")
+    implementation("org.koin:koin-androidx-viewmodel:$koinVersion")
 
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
 }
