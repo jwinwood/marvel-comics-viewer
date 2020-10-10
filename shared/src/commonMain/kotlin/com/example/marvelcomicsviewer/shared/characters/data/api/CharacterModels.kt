@@ -1,4 +1,4 @@
-package com.example.marvelcomicsviewer.shared.characters.api
+package com.example.marvelcomicsviewer.shared.characters.data.api
 
 import kotlinx.serialization.Serializable
 

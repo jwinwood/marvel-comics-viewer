@@ -3,7 +3,6 @@ package com.example.marvelcomicsviewer.androidApp
 import android.os.Bundle
 import android.widget.ProgressBar
 import android.widget.TextView
-import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
@@ -13,6 +12,7 @@ import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
+@ExperimentalCoroutinesApi
 class MainActivity : AppCompatActivity() {
 
     private val loadingSpinner: ProgressBar by lazy { findViewById(R.id.loading_spinner) }
